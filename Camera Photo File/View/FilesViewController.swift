@@ -18,10 +18,7 @@ class FilesViewController: UIViewController {
     
     
     // The file components that will be used when reading & writing the file
-    let fileURLComponents = FileURLComponents(fileName: "sample",
-                                              fileExtension: "json",
-                                              directoryName: nil,
-                                              directoryPath: .documentDirectory)
+    let fileURLComponents = FileURLComponents(fileName: "sample", fileExtension: "json", directoryName: nil, directoryPath: .documentDirectory)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +28,12 @@ class FilesViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func saveButtonAction(_ sender: UIButton) {
-        textToSaveTextField.endEditing(true)     // Hide keyboard
+        textToSaveTextField.endEditing(true)
         
-        // Get text
         guard let text = textToSaveTextField.text else { return }
         
-        // Create a sample data object from the input text
         let sampleData = DataModel(text: text)
         
-        // Write the sample object data
         do {
             let url = try sampleData.write(to: fileURLComponents)
             fileNameLabel.text = url.absoluteString
@@ -67,9 +61,6 @@ class FilesViewController: UIViewController {
             }
             textReadLabel.text = nil
             fileNameLabel.text = fileURLComponents.fileName + "." + fileURLComponents.fileExtension! + " has been deleted"
-            
-            // Note: I do not advocate force-unwrapping, but in this case we will consider it safe because we know fileExtension has been set.
-            
         } catch {
             showError(error)
         }
