@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vti-ta-2Sm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Camera-->
+        <scene sceneID="aiH-4B-byB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="aM0-qv-HZ5" customClass="CameraViewController" customModule="Camera_Photo_File" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xIE-GK-oWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcY-pq-JcN">
+                                <rect key="frame" x="147" y="378" width="120" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="DAZ-9r-Kyc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="V6e-VF-GhT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y0o-iR-6ZB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BcY-pq-JcN" firstAttribute="centerX" secondItem="xIE-GK-oWQ" secondAttribute="centerX" id="ctX-le-1hJ"/>
+                            <constraint firstItem="BcY-pq-JcN" firstAttribute="centerY" secondItem="xIE-GK-oWQ" secondAttribute="centerY" id="nvX-uf-pPE"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" id="QMt-WV-gZF"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gA-Yg-RBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="816" y="392"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="Xdk-3D-ROT">
+            <objects>
+                <viewController id="UUD-FZ-02c" customClass="PhotoViewController" customModule="Camera_Photo_File" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GY0-fg-qFF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHF-8e-GWw">
+                                <rect key="frame" x="147" y="378" width="120" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Jdz-dj-SJY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Kr4-BH-tQh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WAT-KH-vyp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sHF-8e-GWw" firstAttribute="centerY" secondItem="GY0-fg-qFF" secondAttribute="centerY" id="9bD-Z0-bSo"/>
+                            <constraint firstItem="sHF-8e-GWw" firstAttribute="centerX" secondItem="GY0-fg-qFF" secondAttribute="centerX" id="uFn-LH-Fji"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Photo" image="photo.tv" catalog="system" id="X0s-js-0GR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zkl-1a-Kl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="-473"/>
+        </scene>
+        <!--Files-->
+        <scene sceneID="jw0-9p-5pD">
+            <objects>
+                <viewController id="7cs-rg-ZeF" customClass="FilesViewController" customModule="Camera_Photo_File" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0t9-hA-WLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Files" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B3-Am-4SN">
+                                <rect key="frame" x="147" y="378" width="120" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="5Os-xt-9Ua"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Xem-QA-3OZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2NJ-0v-KWA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8B3-Am-4SN" firstAttribute="centerX" secondItem="0t9-hA-WLT" secondAttribute="centerX" id="4AK-uS-dC3"/>
+                            <constraint firstItem="8B3-Am-4SN" firstAttribute="centerY" secondItem="0t9-hA-WLT" secondAttribute="centerY" id="Vb4-tt-5JA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Files" image="filemenu.and.cursorarrow" catalog="system" id="05w-Yg-bkX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwS-vU-xmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-948" y="-473"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5jH-uX-Lnv">
+            <objects>
+                <tabBarController id="Vti-ta-2Sm" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H2Y-9W-dxQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UUD-FZ-02c" kind="relationship" relationship="viewControllers" id="s2A-Mc-QQ7"/>
+                        <segue destination="aM0-qv-HZ5" kind="relationship" relationship="viewControllers" id="bQ9-bd-tUb"/>
+                        <segue destination="7cs-rg-ZeF" kind="relationship" relationship="viewControllers" id="eO4-fy-Cgy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uca-24-WGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="-19"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
+        <image name="photo.tv" catalog="system" width="128" height="97"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
