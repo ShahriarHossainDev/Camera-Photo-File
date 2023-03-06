@@ -17,6 +17,8 @@
 		FA3FB67329B59DD3004B84EE /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FB67229B59DD3004B84EE /* FilesViewController.swift */; };
 		FA9AADF529B5A3CE00F665E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AADF429B5A3CE00F665E0 /* Constants.swift */; };
 		FA9AADF829B5ABEB00F665E0 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AADF729B5ABEB00F665E0 /* PhotoCollectionViewCell.swift */; };
+		FA9AADFA29B5BADB00F665E0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AADF929B5BADB00F665E0 /* File.swift */; };
+		FA9AADFC29B5BAFE00F665E0 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AADFB29B5BAFE00F665E0 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FA3FB67229B59DD3004B84EE /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
 		FA9AADF429B5A3CE00F665E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA9AADF729B5ABEB00F665E0 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA9AADF929B5BADB00F665E0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FA9AADFB29B5BAFE00F665E0 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +94,9 @@
 		FA9AADF329B5A3B300F665E0 /* Utilis */ = {
 			isa = PBXGroup;
 			children = (
+				FA9AADF929B5BADB00F665E0 /* File.swift */,
 				FA9AADF429B5A3CE00F665E0 /* Constants.swift */,
+				FA9AADFB29B5BAFE00F665E0 /* DataModel.swift */,
 			);
 			path = Utilis;
 			sourceTree = "<group>";
@@ -179,8 +185,10 @@
 				FA3FB65C29B59AE1004B84EE /* SceneDelegate.swift in Sources */,
 				FA3FB67329B59DD3004B84EE /* FilesViewController.swift in Sources */,
 				FA9AADF829B5ABEB00F665E0 /* PhotoCollectionViewCell.swift in Sources */,
+				FA9AADFA29B5BADB00F665E0 /* File.swift in Sources */,
 				FA3FB66F29B59DBC004B84EE /* CameraViewController.swift in Sources */,
 				FA9AADF529B5A3CE00F665E0 /* Constants.swift in Sources */,
+				FA9AADFC29B5BAFE00F665E0 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
