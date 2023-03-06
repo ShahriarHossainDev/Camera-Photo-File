@@ -15,6 +15,7 @@
 		FA3FB66F29B59DBC004B84EE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FB66E29B59DBC004B84EE /* CameraViewController.swift */; };
 		FA3FB67129B59DC7004B84EE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FB67029B59DC7004B84EE /* PhotoViewController.swift */; };
 		FA3FB67329B59DD3004B84EE /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FB67229B59DD3004B84EE /* FilesViewController.swift */; };
+		FA9AADF529B5A3CE00F665E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AADF429B5A3CE00F665E0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FA3FB66E29B59DBC004B84EE /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FA3FB67029B59DC7004B84EE /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		FA3FB67229B59DD3004B84EE /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		FA9AADF429B5A3CE00F665E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FA3FB65829B59AE1004B84EE /* Camera Photo File */ = {
 			isa = PBXGroup;
 			children = (
+				FA9AADF329B5A3B300F665E0 /* Utilis */,
 				FA3FB66D29B59AF3004B84EE /* View */,
 				FA3FB65929B59AE1004B84EE /* AppDelegate.swift */,
 				FA3FB65B29B59AE1004B84EE /* SceneDelegate.swift */,
@@ -79,6 +82,14 @@
 				FA3FB67229B59DD3004B84EE /* FilesViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FA9AADF329B5A3B300F665E0 /* Utilis */ = {
+			isa = PBXGroup;
+			children = (
+				FA9AADF429B5A3CE00F665E0 /* Constants.swift */,
+			);
+			path = Utilis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				FA3FB65C29B59AE1004B84EE /* SceneDelegate.swift in Sources */,
 				FA3FB67329B59DD3004B84EE /* FilesViewController.swift in Sources */,
 				FA3FB66F29B59DBC004B84EE /* CameraViewController.swift in Sources */,
+				FA9AADF529B5A3CE00F665E0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

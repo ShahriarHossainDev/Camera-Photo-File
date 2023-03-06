@@ -16,29 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcY-pq-JcN">
-                                <rect key="frame" x="147" y="378" width="120" height="140"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guH-SY-kQp">
+                                <rect key="frame" x="20" y="753" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="DAZ-9r-Kyc"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="V6e-VF-GhT"/>
+                                    <constraint firstAttribute="height" constant="40" id="E9v-0H-ZnH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Camera">
+                                    <fontDescription key="titleFontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cameraButtonAction:" destination="aM0-qv-HZ5" eventType="touchUpInside" id="GXd-fL-XvQ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGound" translatesAutoresizingMaskIntoConstraints="NO" id="p8G-RD-6sY">
+                                <rect key="frame" x="20" y="64" width="374" height="669"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y0o-iR-6ZB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BcY-pq-JcN" firstAttribute="centerX" secondItem="xIE-GK-oWQ" secondAttribute="centerX" id="ctX-le-1hJ"/>
-                            <constraint firstItem="BcY-pq-JcN" firstAttribute="centerY" secondItem="xIE-GK-oWQ" secondAttribute="centerY" id="nvX-uf-pPE"/>
+                            <constraint firstItem="p8G-RD-6sY" firstAttribute="leading" secondItem="y0o-iR-6ZB" secondAttribute="leading" constant="20" id="8vM-eP-vqO"/>
+                            <constraint firstItem="p8G-RD-6sY" firstAttribute="top" secondItem="y0o-iR-6ZB" secondAttribute="top" constant="20" id="GUE-ie-5W2"/>
+                            <constraint firstItem="guH-SY-kQp" firstAttribute="top" secondItem="p8G-RD-6sY" secondAttribute="bottom" constant="20" id="UJy-i3-12c"/>
+                            <constraint firstItem="y0o-iR-6ZB" firstAttribute="trailing" secondItem="p8G-RD-6sY" secondAttribute="trailing" constant="20" id="ZQ9-YK-mL1"/>
+                            <constraint firstItem="y0o-iR-6ZB" firstAttribute="bottom" secondItem="guH-SY-kQp" secondAttribute="bottom" constant="20" id="egd-I0-E4j"/>
+                            <constraint firstItem="guH-SY-kQp" firstAttribute="leading" secondItem="y0o-iR-6ZB" secondAttribute="leading" constant="20" id="hUW-dJ-Hzv"/>
+                            <constraint firstItem="y0o-iR-6ZB" firstAttribute="trailing" secondItem="guH-SY-kQp" secondAttribute="trailing" constant="20" id="ogx-sX-zV5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" id="QMt-WV-gZF"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="guH-SY-kQp" id="sRZ-9d-0VY"/>
+                        <outlet property="picImageView" destination="p8G-RD-6sY" id="hng-2F-Xbu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gA-Yg-RBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="392"/>
+            <point key="canvasLocation" x="815.94202898550736" y="391.74107142857139"/>
         </scene>
         <!--Photo-->
         <scene sceneID="Xdk-3D-ROT">
@@ -125,6 +142,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackGound" width="1125.5" height="2000"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
         <image name="photo.tv" catalog="system" width="128" height="97"/>
