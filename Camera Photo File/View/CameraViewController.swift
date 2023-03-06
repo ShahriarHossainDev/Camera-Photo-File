@@ -25,6 +25,7 @@ class CameraViewController: UIViewController {
     @IBAction func cameraButtonAction(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.sourceType = .camera
+        picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
     }
@@ -40,7 +41,7 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
             return
         }
         picImageView.image = image

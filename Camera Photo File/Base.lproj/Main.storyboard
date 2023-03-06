@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -65,29 +66,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHF-8e-GWw">
-                                <rect key="frame" x="147" y="378" width="120" height="140"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVS-WU-kE0">
+                                <rect key="frame" x="20" y="753" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="Jdz-dj-SJY"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Kr4-BH-tQh"/>
+                                    <constraint firstAttribute="height" constant="40" id="giB-YE-RDG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Photo">
+                                    <fontDescription key="titleFontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="photoButtonAction:" destination="UUD-FZ-02c" eventType="touchUpInside" id="hy8-bh-UjB"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-qV-Jgl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="689"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3uS-Mw-SHT">
+                                    <size key="itemSize" width="152" height="143"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="68v-gu-TEo" customClass="PhotoCollectionViewCell" customModule="Camera_Photo_File" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dix-vi-M03">
+                                            <rect key="frame" x="0.0" y="0.0" width="152" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-qy-0jz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="152" height="143"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BuM-qy-0jz" firstAttribute="leading" secondItem="dix-vi-M03" secondAttribute="leading" id="1uZ-4C-qnb"/>
+                                                <constraint firstItem="BuM-qy-0jz" firstAttribute="top" secondItem="dix-vi-M03" secondAttribute="top" id="Cv1-pp-bPo"/>
+                                                <constraint firstAttribute="trailing" secondItem="BuM-qy-0jz" secondAttribute="trailing" id="spb-zM-7Qf"/>
+                                                <constraint firstAttribute="bottom" secondItem="BuM-qy-0jz" secondAttribute="bottom" id="teQ-hp-X78"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="152" height="143"/>
+                                        <connections>
+                                            <outlet property="picCellImageView" destination="BuM-qy-0jz" id="lK7-rH-MHb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WAT-KH-vyp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sHF-8e-GWw" firstAttribute="centerY" secondItem="GY0-fg-qFF" secondAttribute="centerY" id="9bD-Z0-bSo"/>
-                            <constraint firstItem="sHF-8e-GWw" firstAttribute="centerX" secondItem="GY0-fg-qFF" secondAttribute="centerX" id="uFn-LH-Fji"/>
+                            <constraint firstItem="Hht-qV-Jgl" firstAttribute="leading" secondItem="WAT-KH-vyp" secondAttribute="leading" id="8st-UK-tZi"/>
+                            <constraint firstItem="Hht-qV-Jgl" firstAttribute="top" secondItem="WAT-KH-vyp" secondAttribute="top" id="RgC-cE-2Tz"/>
+                            <constraint firstItem="WAT-KH-vyp" firstAttribute="trailing" secondItem="Hht-qV-Jgl" secondAttribute="trailing" id="UFI-11-YEt"/>
+                            <constraint firstItem="SVS-WU-kE0" firstAttribute="leading" secondItem="WAT-KH-vyp" secondAttribute="leading" constant="20" id="cRT-d9-Heh"/>
+                            <constraint firstItem="SVS-WU-kE0" firstAttribute="top" secondItem="Hht-qV-Jgl" secondAttribute="bottom" constant="20" id="hFB-xL-i9m"/>
+                            <constraint firstItem="WAT-KH-vyp" firstAttribute="bottom" secondItem="SVS-WU-kE0" secondAttribute="bottom" constant="20" id="uZ3-NZ-6fn"/>
+                            <constraint firstItem="WAT-KH-vyp" firstAttribute="trailing" secondItem="SVS-WU-kE0" secondAttribute="trailing" constant="20" id="yk6-RB-6ec"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photo" image="photo.tv" catalog="system" id="X0s-js-0GR"/>
+                    <connections>
+                        <outlet property="photoButton" destination="SVS-WU-kE0" id="SVQ-oS-soG"/>
+                        <outlet property="photoCollectionView" destination="Hht-qV-Jgl" id="lJx-1T-5lX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkl-1a-Kl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="-473"/>
+            <point key="canvasLocation" x="815.94202898550736" y="-473.4375"/>
         </scene>
         <!--Files-->
         <scene sceneID="jw0-9p-5pD">
